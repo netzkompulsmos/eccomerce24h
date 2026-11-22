@@ -1,0 +1,273 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 860" width="100%" height="100%" style="background:#f8fafc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <!-- Drop Shadow Filter -->
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08" />
+    </filter>
+    <filter id="card-shadow" x="-3%" y="-3%" width="108%" height="108%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.06" />
+    </filter>
+    
+    <!-- Crow's foot and Arrow Markers -->
+    <marker id="crow-foot-green" viewBox="0 0 20 20" refX="10" refY="10" markerWidth="14" markerHeight="14" orient="auto">
+      <path d="M 0 0 L 10 10 L 0 20 M 10 10 L 18 10" stroke="#059669" stroke-width="2.5" fill="none" stroke-linecap="round" />
+    </marker>
+    <marker id="one-green" viewBox="0 0 20 20" refX="10" refY="10" markerWidth="12" markerHeight="12" orient="auto">
+      <line x1="6" y1="2" x2="6" y2="18" stroke="#059669" stroke-width="2.5" />
+      <line x1="12" y1="2" x2="12" y2="18" stroke="#059669" stroke-width="2.5" />
+    </marker>
+
+    <marker id="crow-foot-blue" viewBox="0 0 20 20" refX="10" refY="10" markerWidth="14" markerHeight="14" orient="auto">
+      <path d="M 0 0 L 10 10 L 0 20 M 10 10 L 18 10" stroke="#2563eb" stroke-width="2.5" fill="none" stroke-linecap="round" />
+    </marker>
+    <marker id="one-blue" viewBox="0 0 20 20" refX="10" refY="10" markerWidth="12" markerHeight="12" orient="auto">
+      <line x1="6" y1="2" x2="6" y2="18" stroke="#2563eb" stroke-width="2.5" />
+      <line x1="12" y1="2" x2="12" y2="18" stroke="#2563eb" stroke-width="2.5" />
+    </marker>
+
+    <marker id="crow-foot-purple" viewBox="0 0 20 20" refX="10" refY="10" markerWidth="14" markerHeight="14" orient="auto">
+      <path d="M 0 0 L 10 10 L 0 20 M 10 10 L 18 10" stroke="#7c3aed" stroke-width="2.5" fill="none" stroke-linecap="round" />
+    </marker>
+    <marker id="one-purple" viewBox="0 0 20 20" refX="10" refY="10" markerWidth="12" markerHeight="12" orient="auto">
+      <line x1="6" y1="2" x2="6" y2="18" stroke="#7c3aed" stroke-width="2.5" />
+      <line x1="12" y1="2" x2="12" y2="18" stroke="#7c3aed" stroke-width="2.5" />
+    </marker>
+
+    <marker id="crow-foot-amber" viewBox="0 0 20 20" refX="10" refY="10" markerWidth="14" markerHeight="14" orient="auto">
+      <path d="M 0 0 L 10 10 L 0 20 M 10 10 L 18 10" stroke="#d97706" stroke-width="2.5" fill="none" stroke-linecap="round" />
+    </marker>
+    <marker id="one-amber" viewBox="0 0 20 20" refX="10" refY="10" markerWidth="12" markerHeight="12" orient="auto">
+      <line x1="6" y1="2" x2="6" y2="18" stroke="#d97706" stroke-width="2.5" />
+      <line x1="12" y1="2" x2="12" y2="18" stroke="#d97706" stroke-width="2.5" />
+    </marker>
+  </defs>
+
+  <!-- Title Section -->
+  <g transform="translate(60, 30)">
+    <rect width="1080" height="60" rx="12" fill="#ffffff" filter="url(#card-shadow)" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="540" y="32" font-size="19" font-weight="800" fill="#0f172a" text-anchor="middle">E-Commerce Order Database — Entity Relationship Diagram (ERD)</text>
+    <text x="540" y="50" font-size="12" font-weight="500" fill="#64748b" text-anchor="middle">Practical Exercise Database Design • Tables: Customers, Categories, Products, Orders, Order_Items</text>
+  </g>
+
+  <!-- RELATIONSHIP LINES -->
+  <!-- Categories to Products (1 : N) -->
+  <path d="M 195 270 L 195 375" fill="none" stroke="#059669" stroke-width="2.5" marker-start="url(#one-green)" marker-end="url(#crow-foot-green)"/>
+  <rect x="175" y="308" width="40" height="20" rx="4" fill="#ffffff" stroke="#059669" stroke-width="1.5" />
+  <text x="195" y="322" font-size="11" font-weight="700" fill="#059669" text-anchor="middle">1 : N</text>
+
+  <!-- Customers to Orders (1 : N) -->
+  <path d="M 960 415 L 960 470" fill="none" stroke="#2563eb" stroke-width="2.5" marker-start="url(#one-blue)" marker-end="url(#crow-foot-blue)"/>
+  <rect x="940" y="430" width="40" height="20" rx="4" fill="#ffffff" stroke="#2563eb" stroke-width="1.5" />
+  <text x="960" y="444" font-size="11" font-weight="700" fill="#2563eb" text-anchor="middle">1 : N</text>
+
+  <!-- Products to Order_Items (1 : N) -->
+  <path d="M 330 500 L 450 540" fill="none" stroke="#d97706" stroke-width="2.5" marker-start="url(#one-amber)" marker-end="url(#crow-foot-amber)"/>
+  <rect x="375" y="508" width="40" height="20" rx="4" fill="#ffffff" stroke="#d97706" stroke-width="1.5" />
+  <text x="395" y="522" font-size="11" font-weight="700" fill="#d97706" text-anchor="middle">1 : N</text>
+
+  <!-- Orders to Order_Items (1 : N) -->
+  <path d="M 830 580 L 720 560" fill="none" stroke="#7c3aed" stroke-width="2.5" marker-start="url(#one-purple)" marker-end="url(#crow-foot-purple)"/>
+  <rect x="760" y="558" width="40" height="20" rx="4" fill="#ffffff" stroke="#7c3aed" stroke-width="1.5" />
+  <text x="780" y="572" font-size="11" font-weight="700" fill="#7c3aed" text-anchor="middle">1 : N</text>
+
+
+  <!-- TABLE 1: Categories -->
+  <g transform="translate(70, 120)" filter="url(#shadow)">
+    <rect width="250" height="150" rx="10" fill="#ffffff" stroke="#10b981" stroke-width="2"/>
+    <path d="M 0 10 Q 0 0 10 0 L 240 0 Q 250 0 250 10 L 250 36 L 0 36 Z" fill="#10b981"/>
+    <text x="125" y="24" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">Categories</text>
+    
+    <rect x="1" y="37" width="248" height="26" fill="#f0fdf4"/>
+    <rect x="8" y="42" width="22" height="16" rx="3" fill="#10b981"/>
+    <text x="19" y="54" font-size="9" font-weight="800" fill="#ffffff" text-anchor="middle">PK</text>
+    <text x="36" y="54" font-size="12" font-weight="600" fill="#065f46">category_id</text>
+    <text x="240" y="54" font-size="11" fill="#64748b" text-anchor="end">INT</text>
+
+    <text x="16" y="80" font-size="12" fill="#334155">category_name</text>
+    <text x="240" y="80" font-size="11" fill="#64748b" text-anchor="end">VARCHAR(100)</text>
+
+    <rect x="1" y="91" width="248" height="26" fill="#f8fafc"/>
+    <text x="16" y="108" font-size="12" fill="#334155">description</text>
+    <text x="240" y="108" font-size="11" fill="#64748b" text-anchor="end">TEXT</text>
+
+    <text x="16" y="135" font-size="12" fill="#334155">created_at</text>
+    <text x="240" y="135" font-size="11" fill="#64748b" text-anchor="end">TIMESTAMP</text>
+  </g>
+
+  <!-- TABLE 2: Customers -->
+  <g transform="translate(830, 120)" filter="url(#shadow)">
+    <rect width="260" height="290" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+    <path d="M 0 10 Q 0 0 10 0 L 250 0 Q 260 0 260 10 L 260 36 L 0 36 Z" fill="#2563eb"/>
+    <text x="130" y="24" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">Customers</text>
+
+    <!-- Rows -->
+    <rect x="1" y="37" width="258" height="26" fill="#eff6ff"/>
+    <rect x="8" y="42" width="22" height="16" rx="3" fill="#2563eb"/>
+    <text x="19" y="54" font-size="9" font-weight="800" fill="#ffffff" text-anchor="middle">PK</text>
+    <text x="36" y="54" font-size="12" font-weight="600" fill="#1e40af">customer_id</text>
+    <text x="250" y="54" font-size="11" fill="#64748b" text-anchor="end">INT</text>
+
+    <text x="16" y="80" font-size="12" fill="#334155">first_name</text>
+    <text x="250" y="80" font-size="11" fill="#64748b" text-anchor="end">VARCHAR(100)</text>
+
+    <rect x="1" y="91" width="258" height="26" fill="#f8fafc"/>
+    <text x="16" y="108" font-size="12" fill="#334155">last_name</text>
+    <text x="250" y="108" font-size="11" fill="#64748b" text-anchor="end">VARCHAR(100)</text>
+
+    <text x="16" y="135" font-size="12" fill="#334155">email</text>
+    <text x="250" y="135" font-size="11" fill="#64748b" text-anchor="end">VARCHAR(150)</text>
+
+    <rect x="1" y="146" width="258" height="26" fill="#f8fafc"/>
+    <text x="16" y="163" font-size="12" fill="#334155">phone_number</text>
+    <text x="250" y="163" font-size="11" fill="#64748b" text-anchor="end">VARCHAR(30)</text>
+
+    <text x="16" y="190" font-size="12" fill="#334155">address</text>
+    <text x="250" y="190" font-size="11" fill="#64748b" text-anchor="end">TEXT</text>
+
+    <rect x="1" y="201" width="258" height="26" fill="#f8fafc"/>
+    <text x="16" y="218" font-size="12" fill="#334155">city</text>
+    <text x="250" y="218" font-size="11" fill="#64748b" text-anchor="end">VARCHAR(100)</text>
+
+    <text x="16" y="245" font-size="12" fill="#334155">zip_code</text>
+    <text x="250" y="245" font-size="11" fill="#64748b" text-anchor="end">VARCHAR(20)</text>
+
+    <rect x="1" y="256" width="258" height="26" fill="#f8fafc"/>
+    <text x="16" y="273" font-size="12" fill="#334155">created_at</text>
+    <text x="250" y="273" font-size="11" fill="#64748b" text-anchor="end">TIMESTAMP</text>
+  </g>
+
+  <!-- TABLE 3: Products -->
+  <g transform="translate(70, 380)" filter="url(#shadow)">
+    <rect width="260" height="240" rx="10" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+    <path d="M 0 10 Q 0 0 10 0 L 250 0 Q 260 0 260 10 L 260 36 L 0 36 Z" fill="#d97706"/>
+    <text x="130" y="24" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">Products</text>
+
+    <!-- PK -->
+    <rect x="1" y="37" width="258" height="26" fill="#fffbeb"/>
+    <rect x="8" y="42" width="22" height="16" rx="3" fill="#d97706"/>
+    <text x="19" y="54" font-size="9" font-weight="800" fill="#ffffff" text-anchor="middle">PK</text>
+    <text x="36" y="54" font-size="12" font-weight="600" fill="#92400e">product_id</text>
+    <text x="250" y="54" font-size="11" fill="#64748b" text-anchor="end">INT</text>
+
+    <!-- FK -->
+    <rect x="1" y="65" width="258" height="26" fill="#fef3c7"/>
+    <rect x="8" y="70" width="22" height="16" rx="3" fill="#b45309"/>
+    <text x="19" y="82" font-size="9" font-weight="800" fill="#ffffff" text-anchor="middle">FK</text>
+    <text x="36" y="82" font-size="12" font-weight="600" fill="#78350f">category_id</text>
+    <text x="250" y="82" font-size="11" fill="#64748b" text-anchor="end">INT</text>
+
+    <text x="16" y="108" font-size="12" fill="#334155">name</text>
+    <text x="250" y="108" font-size="11" fill="#64748b" text-anchor="end">VARCHAR(150)</text>
+
+    <rect x="1" y="119" width="258" height="26" fill="#f8fafc"/>
+    <text x="16" y="136" font-size="12" fill="#334155">price</text>
+    <text x="250" y="136" font-size="11" fill="#64748b" text-anchor="end">DECIMAL(10,2)</text>
+
+    <text x="16" y="163" font-size="12" fill="#334155">stock_quantity</text>
+    <text x="250" y="163" font-size="11" fill="#64748b" text-anchor="end">INT</text>
+
+    <rect x="1" y="174" width="258" height="26" fill="#f8fafc"/>
+    <text x="16" y="191" font-size="12" fill="#334155">image_url</text>
+    <text x="250" y="191" font-size="11" fill="#64748b" text-anchor="end">VARCHAR(255)</text>
+
+    <text x="16" y="218" font-size="12" fill="#334155">created_at</text>
+    <text x="250" y="218" font-size="11" fill="#64748b" text-anchor="end">TIMESTAMP</text>
+  </g>
+
+  <!-- TABLE 4: Orders -->
+  <g transform="translate(830, 480)" filter="url(#shadow)">
+    <rect width="260" height="315" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+    <path d="M 0 10 Q 0 0 10 0 L 250 0 Q 260 0 260 10 L 260 36 L 0 36 Z" fill="#7c3aed"/>
+    <text x="130" y="24" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">Orders</text>
+
+    <!-- PK -->
+    <rect x="1" y="37" width="258" height="26" fill="#f5f3ff"/>
+    <rect x="8" y="42" width="22" height="16" rx="3" fill="#7c3aed"/>
+    <text x="19" y="54" font-size="9" font-weight="800" fill="#ffffff" text-anchor="middle">PK</text>
+    <text x="36" y="54" font-size="12" font-weight="600" fill="#5b21b6">order_id</text>
+    <text x="250" y="54" font-size="11" fill="#64748b" text-anchor="end">INT</text>
+
+    <!-- FK -->
+    <rect x="1" y="65" width="258" height="26" fill="#ede9fe"/>
+    <rect x="8" y="70" width="22" height="16" rx="3" fill="#6d28d9"/>
+    <text x="19" y="82" font-size="9" font-weight="800" fill="#ffffff" text-anchor="middle">FK</text>
+    <text x="36" y="82" font-size="12" font-weight="600" fill="#4c1d95">customer_id</text>
+    <text x="250" y="82" font-size="11" fill="#64748b" text-anchor="end">INT</text>
+
+    <text x="16" y="108" font-size="12" fill="#334155">order_number</text>
+    <text x="250" y="108" font-size="11" fill="#64748b" text-anchor="end">VARCHAR(50)</text>
+
+    <rect x="1" y="119" width="258" height="26" fill="#f8fafc"/>
+    <text x="16" y="136" font-size="12" fill="#334155">order_date</text>
+    <text x="250" y="136" font-size="11" fill="#64748b" text-anchor="end">DATETIME</text>
+
+    <text x="16" y="163" font-size="12" fill="#334155">shipping_method</text>
+    <text x="250" y="163" font-size="11" fill="#64748b" text-anchor="end">VARCHAR(50)</text>
+
+    <rect x="1" y="174" width="258" height="26" fill="#f8fafc"/>
+    <text x="16" y="191" font-size="12" fill="#334155">shipping_fee</text>
+    <text x="250" y="191" font-size="11" fill="#64748b" text-anchor="end">DECIMAL(10,2)</text>
+
+    <text x="16" y="218" font-size="12" fill="#334155">subtotal</text>
+    <text x="250" y="218" font-size="11" fill="#64748b" text-anchor="end">DECIMAL(10,2)</text>
+
+    <rect x="1" y="229" width="258" height="26" fill="#f8fafc"/>
+    <text x="16" y="246" font-size="12" fill="#334155">discount</text>
+    <text x="250" y="246" font-size="11" fill="#64748b" text-anchor="end">DECIMAL(10,2)</text>
+
+    <text x="16" y="273" font-size="12" fill="#334155">total_amount</text>
+    <text x="250" y="273" font-size="11" fill="#64748b" text-anchor="end">DECIMAL(10,2)</text>
+
+    <rect x="1" y="284" width="258" height="26" fill="#f8fafc"/>
+    <text x="16" y="301" font-size="12" fill="#334155">order_status</text>
+    <text x="250" y="301" font-size="11" fill="#64748b" text-anchor="end">VARCHAR(30)</text>
+  </g>
+
+  <!-- TABLE 5: Order_Items -->
+  <g transform="translate(450, 480)" filter="url(#shadow)">
+    <rect width="270" height="215" rx="10" fill="#ffffff" stroke="#e11d48" stroke-width="2"/>
+    <path d="M 0 10 Q 0 0 10 0 L 260 0 Q 270 0 270 10 L 270 36 L 0 36 Z" fill="#e11d48"/>
+    <text x="135" y="24" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">Order_Items</text>
+
+    <!-- PK -->
+    <rect x="1" y="37" width="268" height="26" fill="#fff1f2"/>
+    <rect x="8" y="42" width="22" height="16" rx="3" fill="#e11d48"/>
+    <text x="19" y="54" font-size="9" font-weight="800" fill="#ffffff" text-anchor="middle">PK</text>
+    <text x="36" y="54" font-size="12" font-weight="600" fill="#9f1239">order_item_id</text>
+    <text x="260" y="54" font-size="11" fill="#64748b" text-anchor="end">INT</text>
+
+    <!-- FK 1 -->
+    <rect x="1" y="65" width="268" height="26" fill="#ffe4e6"/>
+    <rect x="8" y="70" width="22" height="16" rx="3" fill="#be123c"/>
+    <text x="19" y="82" font-size="9" font-weight="800" fill="#ffffff" text-anchor="middle">FK</text>
+    <text x="36" y="82" font-size="12" font-weight="600" fill="#881337">order_id</text>
+    <text x="260" y="82" font-size="11" fill="#64748b" text-anchor="end">INT</text>
+
+    <!-- FK 2 -->
+    <rect x="1" y="93" width="268" height="26" fill="#ffe4e6"/>
+    <rect x="8" y="98" width="22" height="16" rx="3" fill="#be123c"/>
+    <text x="19" y="110" font-size="9" font-weight="800" fill="#ffffff" text-anchor="middle">FK</text>
+    <text x="36" y="110" font-size="12" font-weight="600" fill="#881337">product_id</text>
+    <text x="260" y="110" font-size="11" fill="#64748b" text-anchor="end">INT</text>
+
+    <text x="16" y="136" font-size="12" fill="#334155">quantity</text>
+    <text x="260" y="136" font-size="11" fill="#64748b" text-anchor="end">INT</text>
+
+    <rect x="1" y="147" width="268" height="26" fill="#f8fafc"/>
+    <text x="16" y="164" font-size="12" fill="#334155">unit_price</text>
+    <text x="260" y="164" font-size="11" fill="#64748b" text-anchor="end">DECIMAL(10,2)</text>
+
+    <text x="16" y="191" font-size="12" fill="#334155">subtotal</text>
+    <text x="260" y="191" font-size="11" fill="#64748b" text-anchor="end">DECIMAL(10,2)</text>
+  </g>
+
+  <!-- Legend & Instructions Box -->
+  <g transform="translate(70, 680)" filter="url(#card-shadow)">
+    <rect width="650" height="115" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="20" y="26" font-size="13" font-weight="700" fill="#1e293b">ERD Relationships Legend &amp; Multiplicity:</text>
+    <text x="20" y="48" font-size="11.5" fill="#475569">• <tspan font-weight="700" fill="#047857">Categories ──&lt; Products (1:N):</tspan> One category classifies many products.</text>
+    <text x="20" y="68" font-size="11.5" fill="#475569">• <tspan font-weight="700" fill="#1d4ed8">Customers ──&lt; Orders (1:N):</tspan> One customer can place multiple orders over time.</text>
+    <text x="20" y="88" font-size="11.5" fill="#475569">• <tspan font-weight="700" fill="#6d28d9">Orders ──&lt; Order_Items (1:N):</tspan> One order contains multiple purchased line items.</text>
+    <text x="20" y="108" font-size="11.5" fill="#475569">• <tspan font-weight="700" fill="#b45309">Products ──&lt; Order_Items (1:N):</tspan> One product can appear in many customer orders.</text>
+  </g>
+</svg>
