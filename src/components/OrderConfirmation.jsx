@@ -1,7 +1,7 @@
 import React from 'react';
 import { CheckCircle, Clock, Package, Printer, ArrowRight, User, Calendar, Hash, DollarSign, MapPin, Truck } from 'lucide-react';
 
-export default function OrderConfirmation({ order, onContinueShopping, onViewERD, lang }) {
+export default function OrderConfirmation({ order, onContinueShopping, lang }) {
   if (!order) return null;
 
   const handlePrint = () => {
@@ -195,13 +195,6 @@ export default function OrderConfirmation({ order, onContinueShopping, onViewERD
         </button>
 
         <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
-          <button
-            onClick={onViewERD}
-            className="px-5 py-2.5 bg-indigo-50 border border-indigo-200 text-indigo-700 hover:bg-indigo-100 text-sm font-semibold rounded-xl flex items-center justify-center gap-2 transition cursor-pointer"
-          >
-            <span>{lang === 'kh' ? 'មើលគំនូសតាង ERD Database' : 'View Database ERD'}</span>
-          </button>
-
           <button
             onClick={onContinueShopping}
             className="px-6 py-2.5 bg-black hover:bg-gray-800 text-white text-sm font-bold rounded-xl flex items-center justify-center gap-2 transition cursor-pointer shadow-sm"

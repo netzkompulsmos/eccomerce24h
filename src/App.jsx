@@ -4,7 +4,6 @@ import ProductList from './components/ProductList';
 import ShoppingCart from './components/ShoppingCart';
 import Checkout from './components/Checkout';
 import OrderConfirmation from './components/OrderConfirmation';
-import DatabaseERD from './components/DatabaseERD';
 import { INITIAL_PRODUCTS, SHIPPING_METHODS } from './data/products';
 
 export default function App() {
@@ -197,15 +196,6 @@ export default function App() {
           <OrderConfirmation
             order={currentOrder}
             onContinueShopping={() => setActiveTab('products')}
-            onViewERD={() => setActiveTab('erd')}
-            lang={lang}
-          />
-        )}
-
-        {activeTab === 'erd' && (
-          <DatabaseERD
-            orders={orders}
-            currentOrder={currentOrder}
             lang={lang}
           />
         )}
@@ -217,20 +207,17 @@ export default function App() {
           <div className="flex items-center space-x-2">
             <span className="font-bold text-gray-900">Webyansh Store</span>
             <span>•</span>
-            <span>Practical Exercise React.js Implementation</span>
+            <span>E-Commerce React.js Application</span>
           </div>
           <div className="flex items-center space-x-4">
             <button onClick={() => setActiveTab('products')} className="hover:text-black">
-              1. Products
+              Products
             </button>
             <button onClick={() => setActiveTab('cart')} className="hover:text-black">
-              2. Cart Page
+              Cart
             </button>
             <button onClick={() => setActiveTab('checkout')} className="hover:text-black">
-              3. Checkout
-            </button>
-            <button onClick={() => setActiveTab('erd')} className="hover:text-indigo-600 font-semibold">
-              4. Database ERD
+              Checkout
             </button>
           </div>
         </div>

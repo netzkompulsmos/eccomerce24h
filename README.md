@@ -38,16 +38,7 @@ Project built according to the specifications in `លំហាត់អនុវ
 - **Ordered Products**: Table breakdown of all purchased items with images, unit price, quantity, and subtotal.
 - **Total Amount**: Grand total including shipping fee and discounts.
 - **Order Status**: **"Pending"** badge.
-- Additional actions: Print invoice, continue shopping, and view Database ERD.
-
-### 4. Practical Exercise 4: Database Design (ERD)
-- Interactive ERD viewer inside the web app displaying the 5 required tables:
-  1. `Customers`
-  2. `Categories`
-  3. `Products`
-  4. `Orders`
-  5. `Order_Items`
-- Includes Primary Keys (PK), Foreign Keys (FK), column data types, relationships descriptions, and an exportable SQL schema (`DATABASE_ERD.md`).
+- Additional actions: Print invoice and continue shopping.
 
 ---
 

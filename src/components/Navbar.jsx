@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShoppingBag, ShoppingCart, Database, Package, Sparkles } from 'lucide-react';
+import { ShoppingBag, ShoppingCart, Package } from 'lucide-react';
 
 export default function Navbar({ activeTab, setActiveTab, cartCount, lang, setLang }) {
   return (
@@ -63,21 +63,6 @@ export default function Navbar({ activeTab, setActiveTab, cartCount, lang, setLa
               <ShoppingBag className="w-4 h-4" />
               <span>{lang === 'kh' ? 'ទូទាត់ប្រាក់' : 'Checkout'}</span>
             </button>
-
-            <button
-              onClick={() => setActiveTab('erd')}
-              className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-1.5 ${
-                activeTab === 'erd'
-                  ? 'bg-indigo-600 text-white shadow-sm'
-                  : 'text-indigo-600 hover:bg-indigo-50 border border-indigo-200'
-              }`}
-            >
-              <Database className="w-4 h-4" />
-              <span>{lang === 'kh' ? 'គំនូសតាង ERD' : 'Database ERD'}</span>
-              <span className="text-[10px] bg-indigo-100 text-indigo-700 px-1.5 py-0.5 rounded font-semibold uppercase">
-                Task 4
-              </span>
-            </button>
           </nav>
 
           {/* Right Action: Language toggle & Quick Cart Button */}
@@ -134,15 +119,6 @@ export default function Navbar({ activeTab, setActiveTab, cartCount, lang, setLa
         >
           <ShoppingBag className="w-4 h-4 mb-0.5" />
           <span>Checkout</span>
-        </button>
-        <button
-          onClick={() => setActiveTab('erd')}
-          className={`flex flex-col items-center text-xs py-1 px-3 ${
-            activeTab === 'erd' ? 'text-indigo-600 font-semibold' : 'text-gray-500'
-          }`}
-        >
-          <Database className="w-4 h-4 mb-0.5" />
-          <span>ERD Diagram</span>
         </button>
       </div>
     </header>
